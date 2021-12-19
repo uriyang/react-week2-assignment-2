@@ -1,6 +1,6 @@
 import React from 'react';
-import Input from './Input';
-import List from './List';
+
+import Page from './Page';
 
 export default function App() {
   const tasks = [
@@ -8,15 +8,11 @@ export default function App() {
     { id: 2, title: '아무 것도 하지 않기 #2' },
   ];
 
-  function onClick() {
+  function handleClick() {
     // TODO: 할 일 추가
   }
 
   return (
-    <div>
-      <h1>To-do</h1>
-      <Input onClick={onClick} />
-      <List tasks={tasks} />
-    </div>
+    <Page tasks={tasks} onClick={handleClick} />
   );
 }

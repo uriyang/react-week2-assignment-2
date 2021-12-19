@@ -1,15 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Item from './Item';
 
 export default function List({ tasks }) {
   return (
-    <div>
+    <ol>
       {tasks.map((task) => (
-        <p key={task.id}>
-          {task.title}
-        </p>
+        <Item key={task.id} title={task.title} />
       ))}
-    </div>
+    </ol>
   );
 }
 
