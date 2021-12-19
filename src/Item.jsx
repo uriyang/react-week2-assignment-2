@@ -12,5 +12,8 @@ export default function Item({ task: { id, title } }) {
 }
 
 Item.propTypes = {
-  task: PropTypes.arrayOf(PropTypes.object).isRequired,
+  task: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+  }).isRequired,
 };
