@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Item({ title }) {
+export default function Item({ task: { id, title } }) {
   return (
     <li>
+      {id}
+      -
       {title}
     </li>
   );
 }
 
 Item.propTypes = {
-  title: PropTypes.string.isRequired,
+  task: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
